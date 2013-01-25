@@ -9,13 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "IPADropView.h"
 #import "MAAttachedWindow.h"
+#import <Sparkle/Sparkle.h>
 
 @interface ASAppDelegate : NSObject <NSApplicationDelegate, IPADropViewDelegate, NSMenuDelegate> {
     
-    BOOL openAtLogin,
-    showInDock,
-    showInMenuBar,
-    enablePngcrush;
     
     @private
     NSUserDefaults *defaults_;
@@ -28,7 +25,7 @@
     BOOL reloadOpenApps_;
     
 }
-@property(assign) BOOL openAtLogin, showInDock, showInMenuBar, enablePngcrush;
+@property(assign) BOOL checkForUpdates;
 
 @property IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSMenu *statusItemMenu;

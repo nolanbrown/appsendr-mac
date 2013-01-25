@@ -39,7 +39,6 @@ typedef enum StatusItemState {
 @synthesize popupDurationTextField = popupDurationTextField_;
 @synthesize popupDurationSlider = popupDurationSlider_;
 
-@synthesize openAtLogin = openAtLogin_, showInDock, showInMenuBar, enablePngcrush;
 
 - (void)dealloc
 {
@@ -60,10 +59,8 @@ typedef enum StatusItemState {
     defaults_ = [NSUserDefaults standardUserDefaults];
     menuItems_ = [[NSMutableArray alloc] init];
     
-    if(![defaults_ objectForKey:@"openAtLoginIsSet"]) {
-        self.openAtLogin = YES;
-    }
     
+
     // Insert code here to initialize your application
     [self _setStatusItemState:StatusItemOK];
     NSArray *apps = [self _recentlyOpenedApps];

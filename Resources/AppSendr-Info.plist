@@ -32,6 +32,8 @@
 	<string>Copyright © 2012 Nolan Brown. See LICENSE.txt for Licensing Infomation</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>SUFeedURL</key>
+	<string>https://appsendr.com/static/mac_app_appcast.xml</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

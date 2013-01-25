@@ -10,6 +10,8 @@
 		B16379FF15361EF1006017EE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16379FE15361EF1006017EE /* Quartz.framework */; };
 		B1637B8A15368F13006017EE /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1637B8915368F13006017EE /* Carbon.framework */; };
 		B1735C221538C8AB00C7EAC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1735C211538C8AB00C7EAC6 /* QuartzCore.framework */; };
+		B1B62CA016B23F55004D9AC6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B62C9F16B23F55004D9AC6 /* Sparkle.framework */; };
+		B1B62CA316B244A7004D9AC6 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1B62C9F16B23F55004D9AC6 /* Sparkle.framework */; };
 		B1BF838615348F89003AA1C2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BF838515348F89003AA1C2 /* Cocoa.framework */; };
 		B1BF83A315348FB8003AA1C2 /* appsendr.icns in Resources */ = {isa = PBXBuildFile; fileRef = B1BF83A215348FB8003AA1C2 /* appsendr.icns */; };
 		B1BF931D1534960A003AA1C2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BF838815348F89003AA1C2 /* AppKit.framework */; };
@@ -78,10 +80,24 @@
 		B1F99E1316A8D43E005199B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F99D4D16A8CEAE005199B8 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B1B62CA216B2448C004D9AC6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1B62CA316B244A7004D9AC6 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B16379FE15361EF1006017EE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		B1637B8915368F13006017EE /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		B1735C211538C8AB00C7EAC6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B1B62C9F16B23F55004D9AC6 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Vendor/Sparkle/Sparkle.framework; sourceTree = "<group>"; };
 		B1BF838115348F89003AA1C2 /* AppSendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BF838515348F89003AA1C2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B1BF838815348F89003AA1C2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -194,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B62CA016B23F55004D9AC6 /* Sparkle.framework in Frameworks */,
 				B1F99E1216A8D162005199B8 /* SystemConfiguration.framework in Frameworks */,
 				B1735C221538C8AB00C7EAC6 /* QuartzCore.framework in Frameworks */,
 				B1637B8A15368F13006017EE /* Carbon.framework in Frameworks */,
@@ -233,6 +250,7 @@
 		B1BF838415348F89003AA1C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1B62C9F16B23F55004D9AC6 /* Sparkle.framework */,
 				B1BF838815348F89003AA1C2 /* AppKit.framework */,
 				B1BF838A15348F89003AA1C2 /* Foundation.framework */,
 				B1F99E1116A8D162005199B8 /* SystemConfiguration.framework */,
@@ -501,6 +519,7 @@
 				B1BF837D15348F89003AA1C2 /* Sources */,
 				B1BF837E15348F89003AA1C2 /* Frameworks */,
 				B1BF837F15348F89003AA1C2 /* Resources */,
+				B1B62CA216B2448C004D9AC6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -724,7 +743,10 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Resources/AppSendr.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application: Nolan Brown";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/Sparkle\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/AppSendr-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/AppSendr-Info.plist";
@@ -743,7 +765,10 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/AppSendr.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application: Nolan Brown";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/Sparkle\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/AppSendr-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/AppSendr-Info.plist";
