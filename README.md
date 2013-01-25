@@ -2,12 +2,10 @@
 
 AppSendr is a free service for distributing iOS IPA and Android APK files over-the-air with a short URL. This is a status bar application that runs headless.
 
-## Installation
-
 
 ## Usage
 
-Drag an IPA or APK file to the AppSendr icon in your status bar and it will be immediately uploaded to appsendr.com and a short url of http://ota.io/<APP ID> with be added to your pasteboard.
+Drag an IPA or APK file to the AppSendr icon in your status bar and it will be immediately uploaded to appsendr.com and a short url of http://ota.io/APP_ID with be added to your pasteboard.
 
 ## Contributing
 
