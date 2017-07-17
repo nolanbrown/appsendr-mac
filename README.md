@@ -1,6 +1,4 @@
-# Appsendr is currently shutdown! I had to shut off the service after my bill went from $26 -> $2.2k -> $30k in a month. Someone was doing something nefarious and it's going to take time to track down what exactly happened. I apoligize for any inconvience this may cause you.
-
-
+# Appsendr is currently shutdown! I had to shut off the service after my bill went from $26 -> $2.2k -> $30k in a month. The service was not hacked but someone was doing something nefarious with S3 downloads and it's going to take time to track down what exactly happened. I apoligize for any inconvience this may cause you.
 
 
 # AppSendr
