@@ -1,3 +1,8 @@
+# Appsendr is currently shutdown! I had to shut off the service after my bill went from $26 -> $2.2k -> $30k in a month. Someone was doing something nefarious and it's going to take time to track down what exactly happened. I apoligize for any inconvience this may cause you.
+
+
+
+
 # AppSendr
 
 AppSendr is a free service for distributing iOS IPA and Android APK files over-the-air with a short URL. This is a status bar application that runs headless.
